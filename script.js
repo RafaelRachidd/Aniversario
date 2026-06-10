@@ -192,70 +192,28 @@ function openBirthdayModal(id) {
         instaLink.style.display = "none";
     }
     
-    // ATIVA O RASTREIO E CARREGA OS COMENTÁRIOS DO LOCALSTORAGE
+    // ATIVA O RASTREIO DO ANIVERSARIANTE ATIVO
     aniversarianteAtivo = id;
-    carregarComentarios(id);
+
+    // CÓDIGO DO MURAL DE COMENTÁRIOS (CUSDIS) - RECONFIGURADO SEM ERROS
+    const btnCusdis = document.getElementById("btn-comentarios-cusdis");
+    if (btnCusdis) {
+        const APP_ID_CUSDIS = "ea5366aa-a4fd-4604-b2b6-871d5c3f4cc6"; 
+        
+        // Configura o link dinâmico para abrir o mural exclusivo deste aniversariante
+        btnCusdis.href = `https://cusdis.com/doc/api/comment/widget?appId=${APP_ID_CUSDIS}&pageId=${id}&pageTitle=${encodeURIComponent(aniversariante.name)}`;
+    }
 
     modal.style.display = "flex";
     modal.setAttribute("aria-hidden", "false");
 }
 
+
 function closeBirthdayModal() {
     const modal = document.getElementById("birthdayModal");
     modal.style.display = "none";
     modal.setAttribute("aria-hidden", "true");
-    
-    // Limpa o formulário de recados ao fechar
-    document.getElementById("commentAuthor").value = '';
-    document.getElementById("commentText").value = '';
     aniversarianteAtivo = '';
-}
-
-// --- SISTEMA DE COMENTÁRIOS LOCALSTORAGE ---
-function carregarComentarios(id) {
-    const listContainer = document.getElementById("modalCommentsList");
-    if (!listContainer) return;
-
-    const todosComentarios = JSON.parse(localStorage.getItem(`comentarios_${id}`)) || [];
-
-    if (todosComentarios.length === 0) {
-        listContainer.innerHTML = '<p class="no-comments">Nenhum recado ainda. Seja o primeiro caótico a comentar!</p>';
-        return;
-    }
-
-    listContainer.innerHTML = todosComentarios.map(c => `
-        <div class="comment-item">
-            <div class="comment-header">
-                <span>${c.autor}</span>
-                <span class="comment-time">${c.data}</span>
-            </div>
-            <p class="comment-body">${c.texto}</p>
-        </div>
-    `).join('');
-    
-    listContainer.scrollTop = listContainer.scrollHeight;
-}
-
-function enviarComentario(event) {
-    event.preventDefault();
-    
-    const autorInput = document.getElementById("commentAuthor");
-    const textoInput = document.getElementById("commentText");
-    
-    if (!aniversarianteAtivo || !autorInput.value.trim() || !textoInput.value.trim()) return;
-
-    const novoComentario = {
-        autor: autorInput.value.trim(),
-        texto: textoInput.value.trim(),
-        data: new Date().toLocaleDateString('pt-BR', { hour: '2-digit', minute: '2-digit' })
-    };
-
-    const comentariosAtuais = JSON.parse(localStorage.getItem(`comentarios_${aniversarianteAtivo}`)) || [];
-    comentariosAtuais.push(novoComentario);
-    localStorage.setItem(`comentarios_${aniversarianteAtivo}`, JSON.stringify(comentariosAtuais));
-
-    textoInput.value = '';
-    carregarComentarios(aniversarianteAtivo);
 }
 
 // ==========================================================================

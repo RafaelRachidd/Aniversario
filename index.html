@@ -132,19 +132,16 @@
                         <div class="modal-instagram-box">
                         </div>
 
-                    <div class="comments-section">
-                        <span class="quote-title">Deixe um recado na Linha do Tempo:</span>
-                        
-                        <div class="comments-list" id="modalCommentsList">
-                            <p class="no-comments">Nenhum recado ainda. Seja o primeiro caótico a comentar!</p>
-                        </div>
-
-                        <form id="commentForm" onsubmit="enviarComentario(event)" class="comment-form">
-                            <input type="text" id="commentAuthor" placeholder="Seu nome" required autocomplete="off">
-                            <textarea id="commentText" placeholder="Escreva uma besteira ou depoimento..." rows="2" required></textarea>
-                            <button type="submit" class="btn-submit-comment">Enviar Recado</button>
-                        </form>
-                    </div>
+                   <!-- Área de Recados dentro do seu Modal de Aniversariante -->
+<div class="comentarios-wrapper" style="text-align: center; padding: 1.5rem; margin-top: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+    <h4 style="font-family: var(--font-title); color: var(--color-accent); margin-bottom: 0.5rem; font-size: 1.2rem;">Mural de Recados</h4>
+    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.2rem;">Deixe uma mensagem caótica, uma piada interna ou dê os parabéns!</p>
+    
+    <!-- Este botão vai abrir o mural específico de cada um -->
+    <a id="btn-comentarios-cusdis" href="#" target="_blank" class="quiz-opt-btn" style="display: inline-block; text-decoration: none; font-weight: bold; padding: 0.8rem 1.5rem; background: var(--color-accent); color: #000; border-radius: 8px;">
+     Deixar Recado no Mural
+    </a>
+</div>
                     </div>
                 </div>
             </div>
