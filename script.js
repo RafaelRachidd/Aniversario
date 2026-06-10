@@ -195,15 +195,6 @@ function openBirthdayModal(id) {
     // ATIVA O RASTREIO DO ANIVERSARIANTE ATIVO
     aniversarianteAtivo = id;
 
-    // CÓDIGO DO MURAL DE COMENTÁRIOS (CUSDIS) - RECONFIGURADO SEM ERROS
-    const btnCusdis = document.getElementById("btn-comentarios-cusdis");
-    if (btnCusdis) {
-        const APP_ID_CUSDIS = "ea5366aa-a4fd-4604-b2b6-871d5c3f4cc6"; 
-        
-        // Configura o link dinâmico para abrir o mural exclusivo deste aniversariante
-        btnCusdis.href = `https://cusdis.com/doc/api/comment/widget?appId=${APP_ID_CUSDIS}&pageId=${id}&pageTitle=${encodeURIComponent(aniversariante.name)}`;
-    }
-
     modal.style.display = "flex";
     modal.setAttribute("aria-hidden", "false");
 }
