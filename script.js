@@ -119,7 +119,7 @@ Conhecido por ser extremamente calmo e sereno, enquanto planeja fazer várias me
 Hoje em dia, Messy vive talvez a fase mais calma de sua vida: tem um emprego bom, muitos amigos e quer apenas aproveitar os bons momentos, gastando seu suado dinheiro com álbuns de k-pop e "brusinhas" diversas.
 
 Não o alimente com jurupinga.`,
-        quote: `«O Messi é a única pessoa que consegue planejar um voo espacial e uma besteira colossal na mesma frase, tudo isso a 200km/h!» — O Grupo.`
+        quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     michel: {
         name: "Michel Zeine, o Mikezin ",
@@ -130,7 +130,7 @@ Não o alimente com jurupinga.`,
         desc: `Este é Michel, o gêmeo especial: um engenheiro químico que (ainda) não vende drogas, profissional em inserir a arte da resenha in qualquer rolê e em falar com a mesma empolgação sobre dinossauros, Overwatch e uma Parati duas portas 1992 lindíssima (que carro!).
 
 Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias merdas e por amar demais, Michel vive o sonho de tomar os meios de produção enquanto canta para cachorros. Santista amaldiçoado por escolha (e por total ausência de amor-próprio), ele também é lembrado por uma characteristic peculiar: depois de uma dose de Canelinha, existe uma chance estatisticamente alta de ele começar a abraçar os amigos e chorar por algum motivo misterioso.`,
-        quote: `«Se não fosse o Michel para olhar os nossos planos e dizer "isso vai dar errado", metade de nós não estaria aqui hoje.»`
+        quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     rachid: {
         name: "Rachid",
@@ -143,7 +143,7 @@ Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias mer
 Depois de largar mais de 7 cursos por culpa da indecisão e de uma pandemia, atualmente está em ADS e quase se formando (ainda bem). Fora isso, é bicampeão da Copa Cirrose, ama seus doguinhos e não troca por nada uma cerveja com os amigos. Aliás, quando bebe, ele ganha habilidades similares às do Homem-Aranha, como escalar telhados, dar cambalhotas e fazer exercícios físicos do nada; se ver ele assim, não dê corda (é perigoso).
 
 Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca deram e nem darão certo. Atrapalhado e agitado igual ao esquilo do Deu a Louca na Chapeuzinho, ele tem o dom de falar antes de pensar, criando situações cômicas e muitas vezes vergonhosas.`,
-        quote: `«Rachid tem o superpoder de quase apanhar do Messi e continuar sorrindo como se estivesse num comercial de champô.»`
+        quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     vivi: {
         name: "Vivi",
@@ -152,7 +152,7 @@ Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca der
         imgAtual: "fotos/perfil-vivi.jpg",
         instagram: "vivipaiva.m",
         desc: `Vivi é quase médica-veterinária, apaixonada por animais, plantas e música. Não sai de casa sem fone de ouvido. Tem um carinho especial pelas séries Sex and the City e Fleabag. Tenta levar a vida de forma leve, topando praticamente qualquer rolê; ama conhecer gente nova, conversar e criar memórias com quem gosta. Também ama o Léo, a Paçoca, o Zeca, a Laika, a Tula e o Caqui, e qualquer momento que tenha música boa por perto.`,
-        quote: `«A Vivi gasta em mimos o que o Messi gasta em k-pop, mas faz tudo isso mantendo a pose de alta costura no meio do hospício.»`
+        quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     charlinho: {
         name: "Charlinho",
@@ -163,7 +163,7 @@ Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca der
         desc: `Se o vocalista do Arctic Monkeys tivesse um filho com o Sigmund Freud, esse filho seria o Charles. Profissional em ser um artista amador, de vocalist de sua infame e falida banda a ator, ele é um verdadeiro sex symbol indie da geração Z de Itapetininga (sqn).
 
 Entre poemas e muita psicanálise de boteco, sua personalidade é um mix de humor irônico e autodepreciativo, entregando sempre cortisol alto e carisma. É o gêmeo mais novo da festa, campeão invicto de Mario Kart, palmeirense, namorado da Helen e hater do Nikolas Ferreira.`,
-        quote: `«O Charlinho vive em 2050, pena que a paciência dele ficou guardada lá in 2004 junto com o nascimento.»`
+        quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     }
 };
 
@@ -214,32 +214,32 @@ function closeBirthdayModal() {
 // ==========================================================================
 const quizData = [
     {
-        q: "So fosse fosse escolher um desses cursos, qual seria?",
+        q: "Se você fosse escolher um desses cursos, qual seria?",
         o: [
-            { text: "Arquitetura, sou bom com lego.", target: "messi" },
+            { text: "Arquitetura, sou bom com Lego.", target: "messi" },
             { text: "Engenharia química, quero fazer loló.", target: "michel" },
             { text: "Todos, a vida é muito curta pra fazer só um.", target: "rachid" },
             { text: "Veterinária, ❤️ bichinhos.", target: "vivi" },
-            { text: "Psicologia, vou tratar minha própia depressão.", target: "charlinho" }
+            { text: "Psicologia, vou tratar minha própria depressão.", target: "charlinho" }
         ]
     },
     {
         q: "Qual dessas opções você mais se identifica quando está alcoolizado(a)?",
         o: [
             { text: "Choro muito e quero abraçar meus amigos.", target: "michel" },
-            { text: "Quero um karaoke, começo a cantar e ser performatico.", target: "charlinho" },
-            { text: "Fico mais afetivo, analiso tudo e rio bastante.", target: "vivi" },
+            { text: "Quero um karaokê, começo a cantar e ser performático.", target: "charlinho" },
+            { text: "Fico mais afetivo e rio bastante.", target: "vivi" },
             { text: "Começo a fazer exercícios, fico agitado e sem senso de perigo físico.", target: "rachid" },
-            { text: "Continua bebendo, tento marcar um rôle para São Paulo e dou carona para todo mundo.", target: "messi" }
+            { text: "Continuo bebendo, tento marcar um rolê para São Paulo e dou carona para todo mundo.", target: "messi" }
         ]
     },
     {
-        q: "Se fosse tivesse que escolher uma dessas bandas/arstistas, qual seria?",
+        q: "Se você tivesse que escolher uma dessas bandas/artistas, qual seria?",
         o: [
             { text: "One Direction.", target: "rachid" },
             { text: "Paramore.", target: "vivi" },
-            { text: "Artic Monkeys", target: "charlinho" },
-            { text: "Black Pink", target: "messi" },
+            { text: "Arctic Monkeys.", target: "charlinho" },
+            { text: "Blackpink.", target: "messi" },
             { text: "Dua Lipa.", target: "michel" }
         ]
     },
@@ -247,30 +247,30 @@ const quizData = [
         q: "Se você pudesse ser um animal, qual você seria?",
         o: [
             { text: "Dinossauro, RAWWWWLLL.", target: "michel" },
-            { text: "Ford KA 2007, VRUMMM.", target: "messi" },
-            { text: "Pinguim, insira aqui o som que o pinguim faz", target: "rachid" },
-            { text: "Corsinha 4 portas, TRRRRR", target: "charlinho" },
-            { text: "Doguinho, AU AU", target: "vivi" }
+            { text: "Ford Ka 2007, VRUMMM.", target: "messi" },
+            { text: "Pinguim, insira aqui o som que o pinguim faz.", target: "rachid" },
+            { text: "Corsinha 4 portas, TRRRRR.", target: "charlinho" },
+            { text: "Doguinho, AU AU.", target: "vivi" }
         ]
     },
     {
-        q: "Sua sexta a noite perfeita é?",
+        q: "Sua sexta à noite perfeita é?",
         o: [
             { text: "Um rolê duvidoso em Osasco.", target: "messi" },
-            { text: "Tomar canelinha com os amigos e ficar falando grosselha.", target: "michel" },
-            { text: "Cervejinha no bortoleto com os amigos e depois comer um lanche no BK.", target: "rachid" },
+            { text: "Tomar canelinha com os amigos e ficar falando groselha.", target: "michel" },
+            { text: "Cervejinha no Bortoleto com os amigos e depois comer um lanche no BK.", target: "rachid" },
             { text: "Passar junto da pessoa amada.", target: "vivi" },
-            { text: "Encontrar o pessoal no role junto da minha pessoa amada.", target: "charlinho" }
+            { text: "Encontrar o pessoal no rolê junto da minha pessoa amada.", target: "charlinho" }
         ]
     },
     {
-        q: "Qual desses times você se indetifica mais?",
+        q: "Escolha um drink ou bebida?",
         o: [
-            { text: "Palmeiras", target: "rachid" },
-            { text: "Cruzeiro", target: "vivi" },
-            { text: "Santos do Pelé", target: "messi" },
-            { text: "Santos do neymar", target: "michel" },
-            { text: "Paysandu", target: "charlinho" }
+            { text: "Cervejinha", target: "rachid" },
+            { text: "Caipirinha", target: "vivi" },
+            { text: "Jurupinga", target: "messi" },
+            { text: "Canelinha", target: "michel" },
+            { text: "Cuba libre", target: "charlinho" }
         ]
     }
 ];
@@ -314,11 +314,11 @@ function loadQuiz() {
         // 1. CAMINHO DAS FOTOS QUE VOCÊ QUER QUE APAREÇAM NO RESULTADO DO QUIZ
         // Altere o que está entre aspas para o caminho da foto que você escolher!
         const fotosResultado = {
-            messi: "fotos/resultado-messi.jpg",
-            michel: "fotos/resultado-michel.jpg",
-            rachid: "fotos/resultado-rachid.jpg",
-            vivi: "fotos/resultado-vivi.jpg",
-            charlinho: "fotos/charlinhokid.jpg"
+            messi: "fotos/messi-meme.jpg",
+            michel: "fotos/mike-meme.jpg",
+            rachid: "fotos/xide-meme.jpg",
+            vivi: "fotos/viviv-meme.jpg",
+            charlinho: "fotos/charlinho-meme.jpg"
         };
 
         // 2. TEXTOS PERSONALIZADOS PARA O RESULTADO DO QUIZ
