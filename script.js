@@ -109,7 +109,7 @@ const dadosAniversariantes = {
     messi: {
         name: "Gabriel Messias, o Messie",
         era: "Nascido no Pré-Cambriano",
-        imgCrianca: "fotos/messikid.jpeg",
+        imgCrianca: "fotos/messi.jpg",
         imgAtual: "fotos/messi-perfil.jpg",
         instagram: "messicomamor",
         desc: `Gabriel Messias, mais conhecido como Messie, é um jovem senhor de ??? anos de idade que, ao longo de sua vida, fez de Engenharia Aeroespacial à Arquitetura. Nesse meio tempo, aprendeu a não ficar bêbado com facilidade e a como evitar comandos policiais.
@@ -123,22 +123,22 @@ Não o alimente com jurupinga.`,
     },
     michel: {
         name: "Michel Zeine, o Mikezin ",
-        era: "Galera de 96",
+        era: "15 de junho de 96",
         imgCrianca: "fotos/mikekid.jpeg",
         imgAtual: "fotos/mike3.jpg",
         instagram: "michelzeine",
         desc: `Este é Michel, o gêmeo especial: um engenheiro químico que (ainda) não vende drogas, profissional em inserir a arte da resenha in qualquer rolê e em falar com a mesma empolgação sobre dinossauros, Overwatch e uma Parati duas portas 1992 lindíssima (que carro!).
 
-Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias merdas e por amar demais, Michel vive o sonho de tomar os meios de produção enquanto canta para cachorros. Santista amaldiçoado por escolha (e por total ausência de amor-próprio), ele também é lembrado por uma characteristic peculiar: depois de uma dose de Canelinha, existe uma chance estatisticamente alta de ele começar a abraçar os amigos e chorar por algum motivo misterioso.`,
+Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias merdas e por amar demais, Michel vive the sonho de tomar os meios de produção enquanto canta para cachorros. Santista amaldiçoado por escolha (e por total ausência de amor-próprio), ele também é lembrado por uma characteristic peculiar: depois de uma dose de Canelinha, existe uma chance estatisticamente alta de ele começar a abraçar os amigos e chorar por algum motivo misterioso.`,
         quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     rachid: {
         name: "Rachid",
-        era: "Classe de 1997",
-        imgCrianca: "fotos/rachidkid.jpeg", // Ajustado para seguir o padrão se houver foto dele criança
-        imgAtual: "fotos/perfil-rachid.jpg",
+        era: "20 de Junho de 1997",
+        imgCrianca: "fotos/kidxide.jpg", 
+        imgAtual: "fotos/rachidpp.jpg",
         instagram: "po_rachid",
-        desc: `Se as energias caóticas se unissem e formassem alguém, seria o Gêmeo Rachid. Ele é o gêmeo favorito do Messie (mas ele não admite), o cara que mais ganha carona e o parceiro oficial nos rolês mais duvidosos (Messie não pode negar). Para fechar, também é primo oficial do gêmeo Charlinho.
+        desc: `Tirando fotos de perfil do lado esquerdo do rosto desde 97, esse é o Gêmeo Rachid. Ele é o gêmeo favorito do Messie (mas ele não admite), o cara que mais ganha carona e o parceiro oficial nos rolês mais duvidosos (Messie não pode negar). Para fechar, também é primo oficial do gêmeo Charlinho.
 
 Depois de largar mais de 7 cursos por culpa da indecisão e de uma pandemia, atualmente está em ADS e quase se formando (ainda bem). Fora isso, é bicampeão da Copa Cirrose, ama seus doguinhos e não troca por nada uma cerveja com os amigos. Aliás, quando bebe, ele ganha habilidades similares às do Homem-Aranha, como escalar telhados, dar cambalhotas e fazer exercícios físicos do nada; se ver ele assim, não dê corda (é perigoso).
 
@@ -147,7 +147,7 @@ Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca der
     },
     vivi: {
         name: "Vivi",
-        era: "Classe de 2003",
+        era: "11 de Junho de 2003",
         imgCrianca: "fotos/vivikid.jpeg",
         imgAtual: "fotos/perfil-vivi.jpg",
         instagram: "vivipaiva.m",
@@ -156,9 +156,9 @@ Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca der
     },
     charlinho: {
         name: "Charlinho",
-        era: "Classe de 2004",
+        era: "30 de Maio de 2004",
         imgCrianca: "fotos/charleskid.jpeg",
-        imgAtual: "fotos/perfil-charlinho.jpg",
+        imgAtual: "fotos/charlinhohj.jpg",
         instagram: "charles_edu.jr",
         desc: `Se o vocalista do Arctic Monkeys tivesse um filho com o Sigmund Freud, esse filho seria o Charles. Profissional em ser um artista amador, de vocalist de sua infame e falida banda a ator, ele é um verdadeiro sex symbol indie da geração Z de Itapetininga (sqn).
 
@@ -194,13 +194,10 @@ function openBirthdayModal(id) {
         instaLink.style.display = "none";
     }
     
-    // ATIVA O RASTREIO DO ANIVERSARIANTE ATIVO
     aniversarianteAtivo = id;
-
     modal.style.display = "flex";
     modal.setAttribute("aria-hidden", "false");
 }
-
 
 function closeBirthdayModal() {
     const modal = document.getElementById("birthdayModal");
@@ -298,8 +295,6 @@ function loadQuiz() {
     const progressPercent = (currentQuiz / quizData.length) * 100;
     pBar.style.width = `${progressPercent}%`;
     
-  // ... código anterior da função loadQuiz igual ...
-    
     if(currentQuiz >= quizData.length) {
         let winner = "messi";
         let maxScore = -1;
@@ -311,8 +306,6 @@ function loadQuiz() {
             }
         }
         
-        // 1. CAMINHO DAS FOTOS QUE VOCÊ QUER QUE APAREÇAM NO RESULTADO DO QUIZ
-        // Altere o que está entre aspas para o caminho da foto que você escolher!
         const fotosResultado = {
             messi: "fotos/messi-meme.jpg",
             michel: "fotos/mike-meme.jpg",
@@ -321,7 +314,6 @@ function loadQuiz() {
             charlinho: "fotos/charlinho-meme.jpg"
         };
 
-        // 2. TEXTOS PERSONALIZADOS PARA O RESULTADO DO QUIZ
         const textosResultado = {
             messi: "Você é o ancião do grupo. Prefere a calmaria (ou finge que prefere), planeja mil coisas ao mesmo tempo a 200km/h e tem uma paciência milenar que pode sumir se te derem jurupinga.",
             michel: "Você é o resenheiro oficial! Tem o riso frouxo, ama uma nostalgia (e carros antigos), mas cuidado: uma dose de canelinha e você já está abraçando os amigos e chorando do nada.",
@@ -353,8 +345,7 @@ function loadQuiz() {
         return;
     }
     
-    // ... restante da função loadQuiz igual ...
-    
+    // CARREGA A PERGUNTA ATUAL (Essa parte estava faltando no seu arquivo!)
     const currentData = quizData[currentQuiz];
     qBox.innerText = currentData.q;
     
@@ -391,6 +382,7 @@ window.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     loadQuiz();
     checkScroll();
+    initAcompanhanteLogic(); // Inicia o monitoramento do formulário
 });
 
 window.addEventListener('scroll', checkScroll);
@@ -402,3 +394,28 @@ window.addEventListener('resize', () => {
         generateStars();
     }
 });
+
+// ==========================================================================
+// 6. LOGICA SISTÊMICA DE DINAMISMO DO ACOMPANHANTE (NOVO)
+// ==========================================================================
+function initAcompanhanteLogic() {
+    const selectAcompanhante = document.getElementById('acompanhante-select');
+    const grupoNomeAcompanhante = document.getElementById('grupo-nome-acompanhante');
+    const inputNomeAcompanhante = document.getElementById('nome-acompanhante');
+
+    if(!selectAcompanhante || !grupoNomeAcompanhante || !inputNomeAcompanhante) return;
+
+    // Começa oculto no carregamento inicial da nave
+    grupoNomeAcompanhante.style.display = 'none';
+
+    selectAcompanhante.addEventListener('change', function() {
+        if (this.value === 'sim') {
+            grupoNomeAcompanhante.style.display = 'block';
+            inputNomeAcompanhante.setAttribute('required', 'true');
+        } else {
+            grupoNomeAcompanhante.style.display = 'none';
+            inputNomeAcompanhante.removeAttribute('required');
+            inputNomeAcompanhante.value = ''; // Reseta se mudar de ideia
+        }
+    });
+}
