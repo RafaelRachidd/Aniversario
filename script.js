@@ -313,13 +313,12 @@ function loadQuiz() {
             vivi: "fotos/viviv-meme.jpg",
             charlinho: "fotos/charlinho-meme.jpg"
         };
-
         const textosResultado = {
-            messi: "Você é o ancião do grupo. Prefere a calmaria (ou finge que prefere), planeja mil coisas ao mesmo tempo a 200km/h e tem uma paciência milenar que pode sumir se te derem jurupinga.",
-            michel: "Você é o resenheiro oficial! Tem o riso frouxo, ama uma nostalgia (e carros antigos), mas cuidado: uma dose de canelinha e você já está abraçando os amigos e chorando do nada.",
-            rachid: "Você é o mestre em testar a paciência alheia com um sorriso sereno no rosto. Vive entre o caos completo e a paz absoluta, e tem o superpoder de sair ileso de qualquer encrenca.",
-            vivi: "Você é uma relíquia viva dos anos 2000! Não sai de casa sem fone de ouvido, adora criar memórias com gente nova e mantém a pose de alta costura mesmo no meio do hospício.",
-            charlinho: "Você é o intelectual indie do rolê. Mistura humor irônico, autodepreciativo e muita psicanálise de boteco. Tem o cortisol alto, mas compensa com muito carisma."
+            messi: "Você é o paizão do grupo, gosta de dar carona e conselhos que funcionam para todos, menos para si.",
+            michel: "Você é muito bondoso, se emociona facilmente, é bastante caseiro e ama uma resenha com a turma.",
+            rachid: "Você é bastante agitado, atrapalhado e ama estar com os amigos. Coisas muito aleatórias e improváveis acontecem com frequência na sua vida.",
+            vivi: "Você é tranquila, animada, gosta muito de ouvir música, assistir a séries e passar um tempo de qualidade com seus pets e as pessoas importantes na sua vida.",
+            charlinho: "Você tem um lado meio rockstar misterioso, ama um microfone ou um palco, mas também se perde nos pensamentos e em como lidar com a vida."
         };
         
         document.getElementById("quizBox").innerHTML = `
@@ -331,7 +330,7 @@ function loadQuiz() {
                 </div>
 
                 <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; margin-bottom: 1rem;">
-                    De acordo com as tuas escolhas através das fendas cósmicas, tu es mais parecido com: <br>
+                    De acordo com as suas respostas, o gêmeo que você mais se parece é: <br>
                     <strong style="color:#fff; font-size:1.3rem; display:block; margin-top:0.8rem; font-family:var(--font-title);">${twinNames[winner]}</strong>
                 </p>
                 
@@ -339,7 +338,7 @@ function loadQuiz() {
                     ${textosResultado[winner]}
                 </p>
                 
-                <p style="font-size:0.85rem; opacity:0.6; margin-top:1.5rem;">Sincronização cósmica concluída com sucesso. 🌌</p>
+                <p style="font-size:0.85rem; opacity:0.6; margin-top:1.5rem;">Quizz realizado com sucesso. ;)</p>
             </div>
         `;
         return;
@@ -418,4 +417,79 @@ function initAcompanhanteLogic() {
             inputNomeAcompanhante.value = ''; // Reseta se mudar de ideia
         }
     });
+}
+// ==========================================================================
+// 7. MOTOR DINÂMICO DA ABA INDEPENDENTE DE FOTOS DA TURMA (CORRIGIDO)
+// ==========================================================================
+function toggleGaleriaCompleta() {
+    // Seleciona todas as fotos que têm a classe oculta ou que já foram reveladas
+    const fotos = document.querySelectorAll('.card-foto-turma');
+    const btn = document.getElementById('btn-toggle-galeria');
+    
+    if (!btn) return;
+
+    // Usamos um atributo de controle (dataset) para não depender do texto exato do botão
+    const estaExpandido = btn.dataset.expanded === "true";
+
+    if (!estaExpandido) {
+        // Revela as fotos mudando a classe de oculta para revelada
+        fotos.forEach(foto => {
+            if (foto.classList.contains('foto-oculta')) {
+                foto.classList.remove('foto-oculta');
+                foto.classList.add('foto-revelada');
+            }
+        });
+        btn.innerText = "Recolher Fotos";
+        btn.dataset.expanded = "true";
+    } else {
+        // Recolhe as fotos voltando para o estado oculto
+        // Mantém apenas as 6 primeiras visíveis (índices de 0 a 5)
+        fotos.forEach((foto, index) => {
+            if (index >= 6) {
+                foto.classList.remove('foto-revelada');
+                foto.classList.add('foto-oculta');
+            }
+        });
+        btn.innerText = "Ver Todas as Fotos";
+        btn.dataset.expanded = "false";
+        
+        // Voltar a tela para o topo da seção de fotos de forma suave
+        const secaoFotos = document.getElementById('fotos-turma');
+        if(secaoFotos) secaoFotos.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Força o efeito de scroll se você tiver elementos com reveal ativos
+    if(typeof checkScroll === 'function') {
+        setTimeout(checkScroll, 50);
+    }
+}
+// ==========================================================================
+// 8. CONTROLE DO VISUALIZADOR DE FOTOS EM TELA CHEIA (LIGHTBOX)
+// ==========================================================================
+function abrirLightbox(elemento) {
+    const lightbox = document.getElementById('lightbox-galeria');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxLegenda = document.getElementById('lightbox-legenda');
+    
+    // Captura a imagem interna e o texto da legenda do card clicado
+    const imagemSrc = elemento.querySelector('img').src;
+    const legendaTexto = elemento.querySelector('.legenda-foto') ? elemento.querySelector('.legenda-foto').innerText : "";
+
+    if(!lightbox || !lightboxImg) return;
+
+    // Alimenta o visualizador com os dados corretos
+    lightboxImg.src = imagemSrc;
+    lightboxLegenda.innerText = legendaTexto;
+
+    // Ativa o modal na tela
+    lightbox.classList.add('ativo');
+    lightbox.setAttribute("aria-hidden", "false");
+}
+
+function fecharLightbox() {
+    const lightbox = document.getElementById('lightbox-galeria');
+    if(lightbox) {
+        lightbox.classList.remove('ativo');
+        lightbox.setAttribute("aria-hidden", "true");
+    }
 }

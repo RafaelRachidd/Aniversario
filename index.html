@@ -18,6 +18,8 @@
             <a href="#linha-tempo" class="nav-link">Linha do Tempo</a>
             <a href="#musica" class="nav-link">Playlist da Festa</a>
             <a href="#quiz" class="nav-link">Qual gêmeo é você?</a>
+            <a href="#fotos-turma" class="nav-link">Fotos da Turma</a> 
+            <a href="#linha-tempo" class="nav-link">Linha do Tempo</a>
             <a href="#localizacao" class="nav-link">Onde é?</a>
             <a href="#presenca" class="nav-link">Confirmar Presença</a>
         </div>
@@ -196,6 +198,46 @@ Com seu riso frouxo inconfundível e uma bondade digna de mocinho de filme, ele 
             </div>
         </div>
     </section>
+    <!-- ==========================================================================
+     NOVA SEÇÃO: ARQUIVO DE FOTOS DA TURMA
+     ========================================================================== -->
+<section id="fotos-turma" class="section-padding container">
+    <p class="section-tag">Registros Cósmicos</p>
+    <h2 class="section-title">FOTOS DA TURMA</h2>
+    <p class="section-text text-center" style="margin-bottom: 2.5rem;">
+        O arquivo secreto com as melhores memórias e os registros mais caóticos da nossa história.
+    </p>
+    <div class="galeria-container-turma">
+        <div class="grid-fotos-30">
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma1.jpg" alt="Foto 1"></div>
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma2.jpg" alt="Foto 2"></div>
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma3.jpg" alt="Foto 3"></div>
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma4.jpg" alt="Foto 4"></div>
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma5.jpg" alt="Foto 5"></div>
+            <div class="card-foto-turma" onclick="abrirLightbox(this)"><img src="fotos/turma6.jpg" alt="Foto 6"></div>
+
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma7.jpg" alt="Foto 7"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma8.jpg" alt="Foto 8"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma9.jpg" alt="Foto 9"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma10.jpg" alt="Foto 10"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma11.jpg" alt="Foto 11"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma12.jpg" alt="Foto 12"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma13.jpg" alt="Foto 13"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma14.jpg" alt="Foto 14"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma15.jpg" alt="Foto 15"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma16.jpg" alt="Foto 16"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma17.jpg" alt="Foto 17"></div>
+            <div class="card-foto-turma foto-oculta" onclick="abrirLightbox(this)"><img src="fotos/turma18.jpg" alt="Foto 18"></div>
+            
+            </div>
+    </div>
+
+        <!-- Botão Controlador -->
+        <div class="btn-galeria-wrapper" style="text-align: center; margin-top: 2rem;">
+            <button id="btn-toggle-galeria" class="btn btn-primary" onclick="toggleGaleriaCompleta()">Ver Todas as Fotos</button>
+        </div>
+    </div>
+</section>
 
    <section id="musica" class="section-padding container text-center scroll-reveal">
         <p class="section-tag">A Batida dos Gêmeos</p>
@@ -281,6 +323,12 @@ Com seu riso frouxo inconfundível e uma bondade digna de mocinho de filme, ele 
         <p class="footer-quote">"Leve sua bebida e vá com a melhor roupa de uma década marcante."</p>
         <p class="footer-bottom">© 2026 Alinhamento Estelar Gêmeos. Site criado pelo Rachid.</p>
     </footer>
+
+    <div id="lightbox-galeria" class="lightbox" aria-hidden="true" onclick="fecharLightbox()">
+        <span class="lightbox-fechar">&times;</span>
+        <img id="lightbox-img" src="" alt="Foto Ampliada">
+        <div id="lightbox-legenda" class="lightbox-caption"></div>
+    </div>
 
     <script src="script.js"></script>
     
