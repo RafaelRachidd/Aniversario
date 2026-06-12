@@ -127,22 +127,21 @@ Não o alimente com jurupinga.`,
         imgCrianca: "fotos/mikekid.jpeg",
         imgAtual: "fotos/mike3.jpg",
         instagram: "michelzeine",
-        desc: `Este é Michel, o gêmeo especial: um engenheiro químico que (ainda) não vende drogas, profissional em inserir a arte da resenha in qualquer rolê e em falar com a mesma empolgação sobre dinossauros, Overwatch e uma Parati duas portas 1992 lindíssima (que carro!).
-
-Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias merdas e por amar demais, Michel vive the sonho de tomar os meios de produção enquanto canta para cachorros. Santista amaldiçoado por escolha (e por total ausência de amor-próprio), ele também é lembrado por uma characteristic peculiar: depois de uma dose de Canelinha, existe uma chance estatisticamente alta de ele começar a abraçar os amigos e chorar por algum motivo misterioso.`,
+        desc: `Este é Michel, o gêmeo especial, engenheiro químico que (ainda) não vende drogas, profissional em inserir a arte da resenha em qualquer rolê e em falar com a mesma empolgação sobre dinossauros, Overwatch e uma Parati duas portas 1992 lindíssima (que carro!).
+Reconhecido pelo riso frouxo, pelo azar em todos os jogos, por falar várias merdas e por amar demais, Michel vive o sonho de tomar os meios de produção enquanto canta para cachorros. Santista amaldiçoado por escolha (e pela ausência de amor-próprio), também é lembrado por uma característica peculiar: depois de uma dose de Canelinha, existe uma chance estatisticamente alta de começar a abraçar os amigos e chorar por algum motivo misterioso.`,
         quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     rachid: {
         name: "Rachid",
         era: "20 de Junho de 1997",
-        imgCrianca: "fotos/kidxide.jpg", 
+        imgCrianca: "fotos/xidinho.jpeg", 
         imgAtual: "fotos/rachidpp.jpg",
         instagram: "po_rachid",
-        desc: `Tirando fotos de perfil do lado esquerdo do rosto desde 97, esse é o Gêmeo Rachid. Ele é o gêmeo favorito do Messie (mas ele não admite), o cara que mais ganha carona e o parceiro oficial nos rolês mais duvidosos (Messie não pode negar). Para fechar, também é primo oficial do gêmeo Charlinho.
+        desc: `Não sei muito o que falar sobre mim... Eu sou o Rachid, e acho que essa indecisão (até para pensar no que vou escrever aqui) é minha maior característica, junto com toda a aleatoriedade que me persegue, um pouco de agitação e o dom de ser atrapalhado. Já comecei uns 7 (na verdade foram mais, mas enfim, não vem ao caso) cursos diferentes e finalmente estou quase terminando um: ADS (glória)!!!! Amo fazer de tudo um pouco. No momento, como já falei, estou terminando a faculdade e também faço teatro e estágio. A coisa mais legal do mundo para mim é sair com os amigos <strong>(pena que, para a maioria, isso já não é mais prioridade, nem eu 🥲)</strong> no fim de semana e tomar uma cervejinha, preferencialmente no Bortoleto (melhor bar e melhores porções de almôndega de Itape e região). E, sinceramente, sei lá... não gosto muito de falar sobre mim. Sou bem melhor ao vivo, eu acho.
 
-Depois de largar mais de 7 cursos por culpa da indecisão e de uma pandemia, atualmente está em ADS e quase se formando (ainda bem). Fora isso, é bicampeão da Copa Cirrose, ama seus doguinhos e não troca por nada uma cerveja com os amigos. Aliás, quando bebe, ele ganha habilidades similares às do Homem-Aranha, como escalar telhados, dar cambalhotas e fazer exercícios físicos do nada; se ver ele assim, não dê corda (é perigoso).
 
-Nas horas vagas faz teatro e escreve poesia para sofrer por amores que nunca deram e nem darão certo. Atrapalhado e agitado igual ao esquilo do Deu a Louca na Chapeuzinho, ele tem o dom de falar antes de pensar, criando situações cômicas e muitas vezes vergonhosas.`,
+
+<strong>PS:</strong> O gêmeo Messi fala tudo aquilo, mas no fundo, bem lá no fundo, eu sei que sou o favorito dele kkkkkk`,
         quote: `«Esse conteúdo só será desbloqueado no dia 20 ás 21:30»`
     },
     vivi: {
